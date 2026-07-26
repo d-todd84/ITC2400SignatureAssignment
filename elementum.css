@@ -2,6 +2,8 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
@@ -14,12 +16,6 @@
     --champagne: #F7E7CE;
     --font-header: 'Cinzel', serif;
     --font-body: 'Inter', sans-serif;
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -133,6 +129,11 @@ header {
     color: var(--champagne);
 }
 
+.brand-hero {
+    min-height: 50vh;
+    height: auto;
+}
+
 section {
     padding: 5rem 2rem;
     max-width: 1200px;
@@ -157,10 +158,43 @@ section {
     margin: 1rem auto 0 auto;
 }
 
+
 .grid-3 {
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
+}
+
+.story-centered {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.story-text {
+    margin-bottom: 2.5rem;
+}
+
+.story-text p {
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.story-img-container {
+    width: 100%;
+    height: 400px;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .card {
@@ -190,6 +224,12 @@ section {
     object-position: center;
 }
 
+.brand-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .card h3 {
     font-family: var(--font-header);
     font-size: 1.25rem;
@@ -203,6 +243,72 @@ section {
     font-weight: 600;
     margin-bottom: 1.5rem;
 }
+
+.pillar-card {
+    padding: 2.5rem 2rem;
+}
+
+.cta-banner {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem 2rem;
+    border-top: 1px solid var(--gold-accent);
+    border-bottom: 1px solid var(--gold-accent);
+    font-family: var(--font-header);
+}
+
+.cta-content h2 {
+    font-family: var(--font-header);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.cta-content p {
+    color: var(--champagne);
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-buttons .btn-luxury {
+    flex: 1;
+    text-align: center;
+    padding: 1rem 0;
+    min-width: 180px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--gold-accent);
+}
+
+.btn-outline:hover {
+    background-color: var(--gold-accent);
+    color: var(--bg-dark);
+}
+
+@media (max-width: 768px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .section-title.left-aligned {
+        text-align: center;
+    }
+    .section-title.left-aligned::after {
+        margin: 1rem auto 0 auto;
+    }
+}
+
 
 footer {
     background-color: var(--bg-dark);
@@ -220,6 +326,159 @@ footer h2 {
     letter-spacing: 2px;
 }
 
+.waitlist-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.waitlist-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.waitlist-subtitle {
+    color: var(--text-dark);
+    font-size: 1rem;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.customizer-form {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.form-step {
+    border: none;
+    margin-bottom: 3rem;
+    padding: 0;
+}
+
+.form-step legend {
+    font-family: var(--font-header);
+    font-size: 1.3rem;
+    color: var(--primary-green);
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 0.5rem;
+}
+
+.step-desc {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    columns: var(--text-dark);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background-color: var(--bg-primary);
+    border: 1px solid #DDD;
+    color: var(--text-dark);
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--gold-accent)
+}
+
+.form-hint {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 0.5rem;
+}
+
+.option-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap; 1rem;
+}
+
+.option-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #e5e5e5;
+    background-color: var(--bg-primary);
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+
+.option-card:hover {
+    border-color: var(--gold-accent);
+}
+
+.option-card input[type="radio"] {
+    accent-color: var(--primary-green);
+    margin-top: 0.25rem;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.option-title {
+    font-family: var(--font-header);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.option-sub {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0.25rem;
+}
+
+.form-submit {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-submit {
+    width: 100%;
+    max-width: 350px;
+    padding: 1rem 0;
+}
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -227,5 +486,15 @@ footer h2 {
     }
     .hero-content h2 {
         font-size: 2.5rem;
+    }
+    .customizer-form {
+        padding: 1.5rem;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .option-grid {
+        grid-template-columns: 1fr;
     }
 }
