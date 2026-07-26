@@ -296,19 +296,6 @@ section {
     color: var(--bg-dark);
 }
 
-@media (max-width: 768px) {
-    .story-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    .section-title.left-aligned {
-        text-align: center;
-    }
-    .section-title.left-aligned::after {
-        margin: 1rem auto 0 auto;
-    }
-}
-
 
 footer {
     background-color: var(--bg-dark);
@@ -377,7 +364,7 @@ footer h2 {
 
 .form-row {
     display: flex;
-    gap: 1.5rem
+    gap: 1.5rem;
 }
 
 .form-group {
@@ -394,7 +381,7 @@ footer h2 {
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
-    columns: var(--text-dark);
+    color: var(--text-dark);
 }
 
 .form-group input[type="text"],
@@ -415,7 +402,7 @@ footer h2 {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--gold-accent)
+    border-color: var(--gold-accent);
 }
 
 .form-hint {
@@ -427,7 +414,7 @@ footer h2 {
 .option-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap; 1rem;
+    gap: 1rem;
 }
 
 .option-card {
@@ -438,7 +425,7 @@ footer h2 {
     border: 1px solid #e5e5e5;
     background-color: var(--bg-primary);
     cursor: pointer;
-    transition: all 0.3 ease;
+    transition: all 0.3s ease;
 }
 
 .option-card:hover {
@@ -496,5 +483,15 @@ footer h2 {
     }
     .option-grid {
         grid-template-columns: 1fr;
+    }
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .section-title.left-aligned {
+        text-align: center;
+    }
+    .section-title.left-aligned::after {
+        margin: 1rem auto 0 auto;
     }
 }
