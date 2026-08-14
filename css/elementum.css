@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-primary: #FAF9F6;
+    --bg-dark: #1A1A1A;
+    --text-dark: #2C2A29;
+    --text-light: #F2F4F3;
+    --primary-green: #0E4738;
+    --gold-accent: #D4AF37;
+    --champagne: #F7E7CE;
+    --font-header: 'Cinzel', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-primary);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+header {
+    background-color: rgba(250, 249, 246, 0.95);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+.brand h1 {
+    font-family: var(--font-header);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold-accent);
+}
+
+.btn-luxury {
+    display: inline-block;
+    background-color: var(--primary-green);
+    color: var(--text-light);
+    font-family: var(--font-header);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.85rem 2rem;
+    border: 2px solid var(--gold-accent);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-luxury:hover {
+    color: var(--gold-accent);
+    background-color: #082D24;
+    box-shadow: 0 4px 15px rgba(14, 71, 56, 0.2);
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("images/image2.png");
+    min-height: 50vh;
+    height: auto;
+    padding: 6rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-light);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-content h2 {
+    font-family: var(--font-header);
+    font-size: 3.5rem;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    font-weight: 300;
+    color: var(--champagne);
+}
+
+.brand-hero {
+    min-height: 50vh;
+    height: auto;
+}
+
+section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-family: var(--font-header);
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: var(--gold-accent);
+    margin: 1rem auto 0 auto;
+}
+
+
+.grid-3 {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.story-centered {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.story-text {
+    margin-bottom: 2.5rem;
+}
+
+.story-text p {
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.story-img-container {
+    width: 100%;
+    height: 400px;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.card {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.card-img-container {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.brand-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-family: var(--font-header);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.card .price {
+    color: var(--gold-accent);
+    font-family: var(--font-body);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.pillar-card {
+    padding: 2.5rem 2rem;
+}
+
+.cta-banner {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem 2rem;
+    border-top: 1px solid var(--gold-accent);
+    border-bottom: 1px solid var(--gold-accent);
+    font-family: var(--font-header);
+}
+
+.cta-content h2 {
+    font-family: var(--font-header);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.cta-content p {
+    color: var(--champagne);
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-buttons .btn-luxury {
+    flex: 1;
+    text-align: center;
+    padding: 1rem 0;
+    min-width: 180px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--gold-accent);
+}
+
+.btn-outline:hover {
+    background-color: var(--gold-accent);
+    color: var(--bg-dark);
+}
+
+
+footer {
+    background-color: var(--bg-dark);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 2px solid var(--gold-accent);
+    font-size: 0.9rem;
+}
+
+footer h2 {
+    font-family: var(--font-header);
+    color: var(--champagne);
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.waitlist-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.waitlist-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.waitlist-subtitle {
+    color: var(--text-dark);
+    font-size: 1rem;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.customizer-form {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.form-step {
+    border: none;
+    margin-bottom: 3rem;
+    padding: 0;
+}
+
+.form-step legend {
+    font-family: var(--font-header);
+    font-size: 1.3rem;
+    color: var(--primary-green);
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 0.5rem;
+}
+
+.step-desc {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background-color: var(--bg-primary);
+    border: 1px solid #DDD;
+    color: var(--text-dark);
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--gold-accent);
+}
+
+.form-hint {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 0.5rem;
+}
+
+.option-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.option-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #e5e5e5;
+    background-color: var(--bg-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option-card:hover {
+    border-color: var(--gold-accent);
+}
+
+.option-card input[type="radio"] {
+    accent-color: var(--primary-green);
+    margin-top: 0.25rem;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.option-title {
+    font-family: var(--font-header);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.option-sub {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0.25rem;
+}
+
+.form-submit {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-submit {
+    width: 100%;
+    max-width: 350px;
+    padding: 1rem 0;
+}
+
+.error-message {
+    color: #B22222;
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+    display: none;
+    font-weight: 500;
+}
+
+.input-error {
+    border-color: #B22222 !important;
+    background-color: #FFF8F8 !important;
+}
+
+.success-banner {
+    background-color: var(--primary-green);
+    color: var(--text-light);
+    border: 1px solid var(--gold-accent);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: var(--font-header);
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+    .customizer-form {
+        padding: 1.5rem;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .option-grid {
+        grid-template-columns: 1fr;
+    }
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .section-title.left-aligned {
+        text-align: center;
+    }
+    .section-title.left-aligned::after {
+        margin: 1rem auto 0 auto;
+    }
+}
